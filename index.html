@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Passionate About Code</title>
+  <style>
+    /* === Starry Polka Dot Background === */
+    body {
+      background-color: #0a0a0a;
+      color: white;
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      position: relative;
+      overflow-x: hidden;
+    }
+
+    body::before {
+      content: "";
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 200%;
+      height: 200%;
+      background-image: radial-gradient(white 1px, transparent 1px);
+      background-size: 20px 20px;
+      opacity: 0.15;
+      z-index: -1;
+      animation: twinkle 30s linear infinite;
+    }
+
+    @keyframes twinkle {
+      0% {
+        transform: translate(0, 0);
+      }
+      50% {
+        transform: translate(-10px, -10px);
+      }
+      100% {
+        transform: translate(0, 0);
+      }
+    }
+
+    h2 {
+      text-align: center;
+      color: #ff66cc;
+      margin-bottom: 30px;
+    }
+
+    .navbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px 40px;
+      background-color: #121212;
+    }
+
+    .logo {
+      font-size: 1.4rem;
+      font-weight: bold;
+      color: #ff66cc;
+    }
+
+    .nav-links {
+      list-style: none;
+      display: flex;
+      gap: 20px;
+    }
+
+    .nav-links a {
+      color: white;
+      text-decoration: none;
+    }
+
+    .hero {
+      padding: 80px 20px;
+      text-align: center;
+    }
+
+    .hero h1 .highlight {
+      color: #ff66cc;
+    }
+
+    .hero p {
+      max-width: 700px;
+      margin: auto;
+      font-size: 1.1rem;
+    }
+
+    .container {
+      max-width: 1100px;
+      margin: auto;
+      padding: 20px;
+    }
+
+    .about-container p {
+      margin-bottom: 15px;
+      line-height: 1.6;
+    }
+
+    .projects, .tech-stack {
+      padding: 60px 20px;
+      background-color: #0d0d0d;
+    }
+
+    .projects-row {
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 15px;
+    }
+
+    .project-card {
+      background-color: #1a1a1a;
+      border-radius: 12px;
+      padding: 10px;
+      box-shadow: 0 4px 10px rgba(255, 105, 180, 0.1);
+      text-align: center;
+      color: #fff;
+      width: 32%;
+      box-sizing: border-box;
+    }
+
+    .project-card img {
+      width: 90%;
+      height: auto;
+      margin-top: 10px;
+      border-radius: 6px;
+    }
+
+    @media (max-width: 900px) {
+      .project-card {
+        width: 48%;
+      }
+    }
+
+    @media (max-width: 600px) {
+      .project-card {
+        width: 100%;
+      }
+    }
+
+    .tech-icons {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 30px;
+    }
+
+    .tech-item {
+      background-color: #1a1a1a;
+      border-radius: 12px;
+      padding: 16px;
+      text-align: center;
+      color: #fff;
+      width: 80px;
+      height: 80px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .tech-item img {
+      width: 40px;
+      height: 40px;
+    }
+
+    .connect {
+      padding: 60px 20px;
+      background-color: #121212;
+    }
+
+    .connect-flex {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      flex-wrap: wrap;
+      gap: 30px;
+    }
+
+    .connect-left img {
+      width: 100%;
+      max-width: 550px;
+      height: auto;
+      border-radius: 16px;
+      box-shadow: 0 4px 12px rgba(255, 105, 180, 0.2);
+    }
+
+    .connect-right {
+      flex: 1;
+      text-align: left;
+    }
+
+    .connect-right h2 {
+      text-align: left;
+      color: #ff66cc;
+      margin-top: -20px;
+      padding-top: 0;
+    }
+
+    .connect-form {
+      margin-top: 20px;
+      text-align: left;
+    }
+
+    .connect-form input,
+    .connect-form textarea {
+      width: 100%;
+      padding: 10px;
+      margin: 10px 0;
+      background-color: #1a1a1a;
+      border: 1px solid #444;
+      border-radius: 8px;
+      color: white;
+    }
+
+    .connect-form button {
+      background-color: #ff66cc;
+      color: #fff;
+      border: none;
+      padding: 10px 20px;
+      margin-top: 10px;
+      border-radius: 6px;
+      cursor: pointer;
+    }
+
+    .socials {
+      padding: 40px 20px;
+      background-color: #0a0a0a;
+      text-align: center;
+    }
+
+    .socials a {
+      color: #ff66cc;
+      text-decoration: underline;
+      margin: 0 5px;
+    }
+
+    @media (max-width: 768px) {
+      .connect-flex {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+      }
+
+      .connect-right {
+        text-align: center;
+      }
+
+      .connect-form {
+        text-align: center;
+      }
+
+      .connect-right h2 {
+        text-align: center;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <nav class="navbar">
+      <div class="logo">Passionate About Code</div>
+      <ul class="nav-links">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#work">Work</a></li>
+        <li><a href="#tech">Tech Stack</a></li>
+        <li><a href="#connect">Connect</a></li>
+        <li><a href="#socials">Socials</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section class="hero" id="home">
+    <div class="container">
+      <h1>Hi! I am <span class="highlight">Baishali Dash</span></h1>
+      <p>Aspiring Software Engineer with a passion for building innovative solutions and enthusiasm for Machine Learning.</p>
+    </div>
+  </section>
+
+  <section class="about" id="about">
+    <div class="container about-container">
+      <h2>About Me</h2>
+      <p>I am Baishali Dash, currently pursuing B.Tech in Computer Science. I enjoy turning complex problems into simple, beautiful, and intuitive designs.</p>
+      <p>With a growing interest in Machine Learning, I am focused on expanding my skills and contributing to real-world applications that solve problems and bring value to users.</p>
+    </div>
+  </section>
+
+  <section class="projects" id="work">
+    <div class="container">
+      <h2>Some of my Projects</h2>
+      <div class="projects-row">
+        <div class="project-card">
+          <h3>MovieFlex</h3>
+          <p>Responsive web app helping users find movies based on genre and history.</p>
+          <img src="movieflex.jpg" alt="MovieFlex Screenshot" />
+        </div>
+        <div class="project-card">
+          <h3>Medicine Recommender</h3>
+          <p>Predicts diseases from symptoms with voice input and personalized health advice.</p>
+          <img src="medicine.png" alt="Medicine System Screenshot" />
+        </div>
+        <div class="project-card">
+          <h3>Blinkit Sales Dashboard</h3>
+          <p>A Power BI & DAX Driven View of Product and Order Data.</p>
+          <img src="sales.jpg" alt="Sales Dashboard Screenshot" />
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="tech-stack" id="tech">
+    <div class="container">
+      <h2>Tech Stack</h2>
+      <div class="tech-icons">
+        <div class="tech-item"><img src="html.png" alt="HTML"/></div>
+        <div class="tech-item"><img src="css.png" alt="CSS"/></div>
+        <div class="tech-item"><img src="javascript.png" alt="JavaScript"/></div>
+        <div class="tech-item"><img src="react.png" alt="React"/></div>
+        <div class="tech-item"><img src="python.png" alt="Python"/></div>
+        <div class="tech-item"><img src="nodejs.png" alt="Node.js"/></div>
+        <div class="tech-item"><img src="git.png" alt="Git"/></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="connect" id="connect">
+    <div class="container">
+      <div class="connect-flex">
+        <div class="connect-left">
+          <img src="connect-photo.jpg" alt="Baishali Dash Photo" />
+        </div>
+        <div class="connect-right">
+          <h2>Connect With Me</h2>
+          <form class="connect-form" action="https://formspree.io/f/mdkdajer" method="POST">
+            <input type="text" name="name" placeholder="Your Name" required />
+            <input type="email" name="email" placeholder="Your Email Address" required />
+            <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
+            <button type="submit">Send</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="socials" id="socials">
+    <div class="container">
+      <h2>Socials</h2>
+      <p>
+        Connect with me on
+        <a href="https://www.linkedin.com/in/baishali-dash-54ba91260/" target="_blank">LinkedIn</a>
+        <a href="https://github.com/Baishali515" target="_blank">GitHub</a>
+        <a href="https://www.instagram.com/__.baishali.__/" target="_blank">Instagram</a>
+        <a href="mailto:baishalidash553@gmail.com">Gmail</a>.
+      </p>
+    </div>
+  </section>
+</body>
+</html>
+
+
+
+
